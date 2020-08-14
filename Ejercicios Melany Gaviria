@@ -1,0 +1,104 @@
+# problemas secuenciales
+
+## Ejercicio 1
+"""
+
+capital= int(input("Ingrese su capital.\n"))* 0.02
+print("La ganancia es de: $%d" %capital)
+
+"""## Ejercicio 2"""
+
+total= int(input("Ingrese el salario base.\n")) + (int(input("Ingrese la primera venta.\n")) + int(input("Ingrese la segunda venta.\n")) + int(input("Ingrese la tercera venta.\n")))*0.1
+print("Su sueldo será de : $%d" %total)
+
+"""## Ejercicio 3"""
+
+compra= int(input("Ingrese la compra. \n"))* 0.85
+print("El cliente pagará: $%d" %compra)
+
+"""## Ejercicio 4"""
+
+parcial= float(input("Primer parcial:\n"))
+parcial += float(input("Segundo parcial:\n"))
+parcial += float(input("Tercer parcial:\n"))
+examen= float(input("Examen final:\n"))
+trabajo= float(input("Trabajo final:\n"))
+
+nota= (parcial/3)*0.55 + examen*0.30 + trabajo*0.15
+print("Su nota es de:", round(nota, 2))
+
+"""## Ejercicio 5"""
+
+hombres= int(input("Ingrese la cantidad de hombres:\n"))
+mujeres= int(input("Ingrese la cantidad de mujeres:\n"))
+total=hombres+mujeres
+
+phom= round(hombres*100/total, 2)
+pmuj= round(mujeres*100/total, 2)
+
+print("Hombres:",phom,"%\nMujeres",pmuj,"%")
+
+"""## Ejercicio 6"""
+
+from datetime import date
+nac= date( int(input("Año.\n")),int(input("Mes.\n")),int(input("Dia.\n")))
+dif= date.today() - nac
+edad= dif.days // 365
+print("Su edad es de",edad, "años")
+
+"""# Problemas propuestos
+
+## Ejercicio 1
+"""
+
+cop= lambda x: x*0.00026422313
+
+print("Dólares estadounidenses: $%d USD" %round(cop(float(input("Pesos colombianos:\n"))), 2))
+
+"""## Ejercicio 2"""
+
+print("Su valor absoluto es de:",abs(int(input("Ingrese un numero.\n"))))
+
+"""## Ejercicio 3"""
+
+pres= float(input("Presion: "))
+vol= float(input("Volumen: "))
+temp= float(input("Temperatura: "))
+masa= (pres*vol)/(0.37 *(temp+460))
+print("Su masa es de:", round(masa, 2))
+
+"""## Ejercicio 4"""
+
+print("Pulsaciones:", ((220-int(input("Edad:")))/10))
+
+"""## Ejercicio 5"""
+
+print("Su nuevo salario: $%d" %(int(input("Salario viejo:\n"))*1.25))
+
+"""## Ejercicio 6"""
+
+pres= int(input("Presupuesto.\n"))
+gin = pres*0.4
+trauma = pres*0.3
+pedia = pres*0.3
+print("Pediatría: $%d\nTraumatología: $%s\nPediatría: $%a" %(gin, trauma, pedia))
+
+"""## Ejercicio 7"""
+
+print("Precio: $%d" %(int(input("Valor de compra: $"))*1.3))
+
+"""## Ejercicio 8"""
+
+tie=int(input("Tiempo lunes:\n"))
+tie +=int(input("Tiempo miércoles:\n"))
+tie +=int(input("Tiempo viernes:\n"))
+print("Promedio:", round((tie/3), 2), "segundos.")
+
+"""## Ejercicio 9"""
+
+p1=int(input("Persona 1:\n"))
+p2=int(input("Persona 2:\n"))
+p3=int(input("Persona 3:\n"))
+to= p1+p2+p3
+
+print("Total: $%a\nPersona 1: %d" %(to,round(p1*100/to, 2))+"%"+"\nPersona 2: %e" %round(p2*100/to, 2)+"%"+"\nPersona 3: %f" %round(p3*100/to, 2)+"%")
